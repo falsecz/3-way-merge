@@ -1,12 +1,19 @@
 {
   "name": "3-way-merge",
   "version": "0.0.1",
-  "description": "",
   "main": "index.coffee",
   "scripts": {
     "test": "mocha --require coffee-script/register --compilers coffee:coffee-script/register test/"
   },
   "devDependencies": {
     "chai": "~1.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/falsecz/3-way-merge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/falsecz/3-way-merge/issues"
+  },
+  "homepage": "https://github.com/falsecz/3-way-merge"
 }
