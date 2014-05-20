@@ -1,0 +1,12 @@
+{
+  "name": "3-way-merge",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "mocha --require coffee-script/register --compilers coffee:coffee-script/register test/"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1"
+  }
+}
