@@ -1,6 +1,11 @@
 {
   "name": "3-way-merge",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "3-way merging of JavaScript objects",
+  "keywords": [
+    "3-way merge",
+    "3way merge"
+  ],
   "main": "index.coffee",
   "scripts": {
     "test": "mocha --require coffee-script/register --compilers coffee:coffee-script/register test/"
