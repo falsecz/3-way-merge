@@ -1,5 +1,5 @@
 ###
-Function for 3 way merge
+Function for 3-way merge
 
 @param {Object} o (original)
 @param {Object} a (current)
@@ -8,10 +8,9 @@ Function for 3 way merge
 ###
 
 merge = (o, a, b) ->
-	throw new Error "Merge missing original document" unless o
-	throw new Error "Merge missing current document" unless a
-	throw new Error "Merge missing new document" unless b
-
+	throw new Error 'Merge missing original document' if typeof o is 'undefined'
+	throw new Error 'Merge missing current document' if typeof a is 'undefined'
+	throw new Error 'Merge missing new document' if typeof b is 'undefined'
 
 
 	isArray = Array.isArray b
@@ -44,11 +43,12 @@ merge = (o, a, b) ->
 			if not k of result
 				result[k] = a[k]
 			else if a[k] isnt result[k]
-				if typeof a[k] is 'object' and typeof b[k] is 'object'
-					ov = if k of o and typeof o[k] is 'object' then o[k] else {}
+				if typeof a[k] is 'object' and typeof b?[k] is 'object'
+					ov = if o? and k of o and typeof o[k] is 'object' then o[k] else {}
 					result[k] = merge ov, a[k], b[k]
-				else if b[k] is o[k]
+				else if b?[k] is o?[k]
 					result[k] = a[k]
+
 	result
 
 module.exports = merge

@@ -167,3 +167,11 @@ describe 'Merge', ->
 		expected = ['one', 'three']
 
 		expect(expected).to.deep.equal merge(o, a, b)
+
+	it 'null values in object', ->
+		o = key1: null
+		a = key1: key2: null
+		b = key1: null
+		expected = key1: key2: null
+
+		expect(expected).to.deep.equal merge(o, a, b)
