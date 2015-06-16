@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/falsecz/3-way-merge.svg?branch=master)](https://travis-ci.org/falsecz/3-way-merge)
+[![Dependency Status](https://david-dm.org/falsecz/3-way-merge.svg)](https://david-dm.org/falsecz/3-way-merge)
+[![npm version](https://badge.fury.io/js/3-way-merge.svg)](http://badge.fury.io/js/3-way-merge)
+
+
 # merge(o, a, b) -> c
 
 3-way merging of JavaScript objects
