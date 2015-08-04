@@ -8,10 +8,9 @@ Function for 3-way merge
 ###
 
 merge = (o, a, b) ->
-	throw new Error 'Merge missing original document' if typeof o is 'undefined'
-	throw new Error 'Merge missing current document' if typeof a is 'undefined'
-	throw new Error 'Merge missing new document' if typeof b is 'undefined'
-
+	throw new Error 'Merge original document must be an object!' if typeof o isnt 'object'
+	throw new Error 'Merge current document must be an object!' if typeof a isnt 'object'
+	throw new Error 'Merge new document must be an object!' if typeof b isnt 'object'
 
 	isArray = Array.isArray b
 	result = if isArray then [] else {}

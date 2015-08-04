@@ -175,3 +175,10 @@ describe 'Merge', ->
 		expected = key1: key2: null
 
 		expect(expected).to.deep.equal merge(o, a, b)
+
+	it 'throws error when merging is impossible', ->
+		o = 'o'
+		a = 'a'
+		b = 'b'
+
+		expect(-> merge o, a, b).to.throw Error
