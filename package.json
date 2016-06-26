@@ -6,7 +6,7 @@
     "3-way merge",
     "3way merge"
   ],
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --require coffee-script/register --compilers coffee:coffee-script/register test/",
     "prepublish": "coffee --compile ."
