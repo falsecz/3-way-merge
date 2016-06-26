@@ -8,7 +8,8 @@
   ],
   "main": "index.coffee",
   "scripts": {
-    "test": "mocha --require coffee-script/register --compilers coffee:coffee-script/register test/"
+    "test": "mocha --require coffee-script/register --compilers coffee:coffee-script/register test/",
+    "prepublish": "coffee --compile ."
   },
   "devDependencies": {
     "chai": "^3.0.0",
