@@ -182,3 +182,11 @@ describe 'Merge', ->
 		b = 'b'
 
 		expect(-> merge o, a, b).to.throw Error
+
+	it 'arrays and sort', ->
+		o = [0, 1, 2, 3]
+		a = [0, 1, 2, 30]
+		b = [0, 10, 2, 3]
+		expected = [0, 2, 10, 30]
+
+		expect(expected).to.deep.equal merge(o, a, b)

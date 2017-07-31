@@ -29,8 +29,10 @@ merge = (o, a, b) ->
 			else if typeof a[k] is 'object' and typeof b[k] is 'object'
 				ov = if k of o and typeof o[k] is 'object' then o[k] else {}
 				result[k] = merge ov, a[k], b[k]
-			else if b[k] not in a
+			else if b[k] not in a and b[k] not in o
 				result.push b[k]
+
+		result = result.sort (a, b) -> Number(a) > Number(b)
 
 	else
 		a = {} if Array.isArray a
