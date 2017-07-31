@@ -32,7 +32,7 @@ merge = (o, a, b) ->
 			else if b[k] not in a and b[k] not in o
 				result.push b[k]
 
-		result = result.sort (a, b) -> Number(a) > Number(b)
+		result.sort (a, b) -> Number(a) > Number(b)
 
 	else
 		a = {} if Array.isArray a
